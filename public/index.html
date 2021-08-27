@@ -10,24 +10,24 @@
 </head>
 
 <body>
-    <div class="card">
-        <div class="card-header">
-            <h3>Lista de usuarios     </h3>
-            <h3>Práctica de laboratorio #9</h3>
-            <h3>Figueroa - Mite - Zaruma</h3>
+    <div class="card text-white bg-secondary mb-3">
+        <div class="card-header text-center">
+            <h2>Usuarios     </h2>
+            <h2>Práctica de laboratorio #9</h2>
+            <h3>Azanza - Astudillo - Quishpe</h3>
             <div>
-                <a href="user.html">Buscar usuarios</a>
+                <a href="user.html" class="btn btn-primary">Buscar usuarios</a>
             </div>
         </div>
     
         <div class="card-body">
             <div class="result">
-                <table class="table">
+                <table class="table table-dark table-striped table-hover">
                     <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Titulo</th>
-                            <th>Completado</th>
+                            <th scope = "col">Id</th>
+                            <th scope = "col">Titulo</th>
+                            <th scope = "col">Completado</th>
                         </tr>
                     </thead>
                     <tbody id="table">
@@ -50,7 +50,7 @@
                 for(let u of resp.data.users){
                     console.log(u);
                     template+=`<tr>
-                            <td scope="row">${u.userId}</td>
+                            <th scope="row">${u.userId}</th>
                             <td>${u.title}</td>
                             <td>${u.completed}</td>
                         </tr>`;
